@@ -5,7 +5,6 @@ Release: %mkrel 2
 License: GPL
 Group: Archiving/Backup
 Source: ftp://ftp.suse.com/pub/people/kukuk/pax/%{name}-%{version}.tar.bz2
-BuildRoot: %{_tmppath}/%{name}-root
 URL:	ftp://ftp.suse.com/pub/people/kukuk/pax/
 Requires: common-licenses
 
