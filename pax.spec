@@ -1,12 +1,12 @@
 Summary: POSIX File System Archiver
 Name: pax
 Version: 3.4
-Release: %mkrel 10
+Release: 11
 License: GPL
 Group: Archiving/Backup
-Source: ftp://ftp.suse.com/pub/people/kukuk/pax/%{name}-%{version}.tar.bz2
+Source0: ftp://ftp.suse.com/pub/people/kukuk/pax/%{name}-%{version}.tar.bz2
 Patch0: pax-3.4-gcc46.patch
-BuildRoot: %{_tmppath}/%{name}-root
+Patch1: pax-automake-1.13.patch
 URL:	ftp://ftp.suse.com/pub/people/kukuk/pax/
 
 %description
@@ -16,6 +16,7 @@ common forms of standard Unix archive (backup) files - CPIO and TAR.
 %prep
 %setup -q
 %patch0 -p0
+%patch1 -p1 -b .am113~
 
 %build
 autoreconf -fi
@@ -27,9 +28,6 @@ rm -rf $RPM_BUILD_ROOT
 mkdir -p %{buildroot}%{_bindir}
 mkdir -p %{buildroot}%{_mandir}/man1
 %makeinstall_std
-
-%clean
-rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)

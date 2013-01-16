@@ -1,0 +1,13 @@
+--- pax-3.4/configure.in.bero	2013-01-16 02:00:43.138556199 +0100
++++ pax-3.4/configure.in	2013-01-16 02:00:54.897420935 +0100
+@@ -1,7 +1,7 @@
+ dnl Process this file with autoconf to produce a configure script.
+-AC_INIT(src/pax.c)
+-AM_INIT_AUTOMAKE("pax", 3.4)
+-AM_CONFIG_HEADER(config.h)
++AC_INIT("pax", 3.4)
++AM_INIT_AUTOMAKE
++AC_CONFIG_HEADERS([config.h])
+ AC_PREFIX_DEFAULT(/usr)
+ 
+ AC_SUBST(PACKAGE)
