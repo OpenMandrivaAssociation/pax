@@ -1,3 +1,5 @@
+%define _disable_lto 1
+
 Summary:	POSIX File System Archiver
 Name:		pax
 Version:	3.4
@@ -14,21 +16,19 @@ Patch1:		pax-automake-1.13.patch
 common forms of standard Unix archive (backup) files - CPIO and TAR.
 
 %prep
-%setup -q
-%apply_patches
+%autosetup -p1
 autoreconf -fi
 
 %build
-%configure2_5x
-%make
+%configure
+%make_build
 
 %install
 mkdir -p %{buildroot}%{_bindir}
 mkdir -p %{buildroot}%{_mandir}/man1
-%makeinstall_std
+%make_install
 
 %files
 %doc AUTHORS NEWS README THANKS
 %{_bindir}/pax
 %{_mandir}/man1/*
-
