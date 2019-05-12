@@ -8,8 +8,13 @@ License:	GPLv2
 Group:		Archiving/Backup
 Url:		ftp://ftp.suse.com/pub/people/kukuk/pax/
 Source0:	ftp://ftp.suse.com/pub/people/kukuk/pax/%{name}-%{version}.tar.bz2
-Patch0:		pax-3.4-gcc46.patch
-Patch1:		pax-automake-1.13.patch
+Patch0:		https://src.fedoraproject.org/rpms/pax/raw/master/f/pax-3.0-PATHMAX.patch
+Patch1:		https://src.fedoraproject.org/rpms/pax/raw/master/f/pax-3.4-abs100.patch
+Patch2:		https://src.fedoraproject.org/rpms/pax/raw/master/f/pax-3.4-disable-Werror.patch
+Patch3:		https://src.fedoraproject.org/rpms/pax/raw/master/f/pax-3.4-manpage.patch
+Patch4:		https://src.fedoraproject.org/rpms/pax/raw/master/f/pax-3.4-rdtruncate.patch
+Patch5:		https://src.fedoraproject.org/rpms/pax/raw/master/f/pax-gcc46.patch
+Patch6:		pax-automake-1.13.patch
 
 %description
 'pax' is the POSIX standard archive tool.  It supports the two most
