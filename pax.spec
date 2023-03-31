@@ -3,7 +3,7 @@
 Summary:	POSIX File System Archiver
 Name:		pax
 Version:	3.4
-Release:	21
+Release:	22
 License:	GPLv2
 Group:		Archiving/Backup
 Url:		ftp://ftp.suse.com/pub/people/kukuk/pax/
