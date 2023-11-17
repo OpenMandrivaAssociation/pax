@@ -1,9 +1,10 @@
+%global optflags %{optflags} -fcommon
 %define _disable_lto 1
 
 Summary:	POSIX File System Archiver
 Name:		pax
 Version:	3.4
-Release:	22
+Release:	23
 License:	GPLv2
 Group:		Archiving/Backup
 Url:		ftp://ftp.suse.com/pub/people/kukuk/pax/
