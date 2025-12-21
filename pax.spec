@@ -17,6 +17,11 @@ Patch4:		https://src.fedoraproject.org/rpms/pax/raw/master/f/pax-3.4-rdtruncate.
 Patch5:		https://src.fedoraproject.org/rpms/pax/raw/master/f/pax-gcc46.patch
 Patch6:		pax-automake-1.13.patch
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 'pax' is the POSIX standard archive tool.  It supports the two most
 common forms of standard Unix archive (backup) files - CPIO and TAR.
